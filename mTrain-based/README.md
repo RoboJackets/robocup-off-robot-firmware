@@ -1,7 +1,10 @@
 
-# mTrain Code
+# mTrain code
+This folder includes firmware codebase for off-robot projects that runs on the mTrain. 
 
-This is 
+## How to compile the code in this folder:
+
+<Instructions>
 
 ## License
 
