@@ -1,10 +1,10 @@
 
 # AVR code
-This folder includes firmware codebase that can runs on microcontrollers with AVR architecture. 
+This folder includes firmware codebase that runs on microcontrollers with AVR architecture. 
 
 ## How to compile the code in this folder:
 
-
+<Instructions>
 
 ## License
 
