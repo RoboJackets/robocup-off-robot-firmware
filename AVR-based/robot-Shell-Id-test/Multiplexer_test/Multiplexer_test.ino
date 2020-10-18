@@ -23,12 +23,12 @@ void setup(void)
   Serial.begin(9600);
   
   /* Initialise the 1st sensor */
-  //tcaselect(3);
-  //if(!cSensor1.begin())
-  //{
-   // Serial.println("cSensor1 was not identified");
-   // while(1);
-  //}
+  tcaselect(3);
+  if(!cSensor1.begin())
+  {
+    Serial.println("cSensor1 was not identified");
+    while(1);
+  }
   
   /* Initialise the 2nd sensor */
   tcaselect(7);
@@ -37,34 +37,32 @@ void setup(void)
     Serial.println("cSensor2 was not identified");
     while(1);
   }
-  
-  /* Display some basic information on this sensor */
 }
  
 void loop(void) 
 {
   float red, green, blue;
-  /* Get a new sensor event */ 
-  
-  //tcaselect(2);
+
+  // selects Sensor 1 from multiplexor
+  tcaselect(3);
  
-  //Serial.print("Sensor #1 - ");
+  Serial.print("Sensor #1 - ");
   
 
-  //delay(60);  // takes 50ms to read
+  delay(60);  // takes 50ms to read
 
-  //cSensor1.getRGB(&red, &green, &blue);
+  cSensor1.getRGB(&red, &green, &blue);
   
 
-  //Serial.print("R:\t"); Serial.print(int(red)); 
-  //Serial.print("\tG:\t"); Serial.print(int(green)); 
-  //Serial.print("\tB:\t"); Serial.print(int(blue));
-  //Serial.print("\n");
-  
+  Serial.print("R:\t"); Serial.print(int(red)); 
+  Serial.print("\tG:\t"); Serial.print(int(green)); 
+  Serial.print("\tB:\t"); Serial.print(int(blue));
+  Serial.print("\n");
+
+  // selects Sensor 2 from multiplexor
   tcaselect(7);
   Serial.print("Sensor #2 - ");
   
-
   delay(60);  // takes 50ms to read
 
   cSensor2.getRGB(&red, &green, &blue);
