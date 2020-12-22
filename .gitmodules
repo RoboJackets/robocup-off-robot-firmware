@@ -1,0 +1,3 @@
+[submodule "mTrain-based/mtrain"]
+	path = mTrain-based/mtrain
+	url = git@github.com:RoboJackets/mtrain-firmware.git
