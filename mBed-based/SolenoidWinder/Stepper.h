@@ -30,9 +30,11 @@ class Stepper {
 
         // Getter for motorStepsPerRev
         int getmotorStepsPerRev() {return motorStepsPerRev; }
+        void setMotorStepsPerRev(int motorStepsPerRev) {this-> motorStepsPerRev = motorStepsPerRev;}
 
          // Getter for microstepFactor
         int getMicrostepFactor() {return microstepFactor;}
+        void setMicrostepFactor(int microstepFactor) {this-> microstepFactor = microstepFactor;}
 
         // Getter and setter for direction
         void setDir(int dir) {this-> dir = dir;}
