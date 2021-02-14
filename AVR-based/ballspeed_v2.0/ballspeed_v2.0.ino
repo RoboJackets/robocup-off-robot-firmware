@@ -5,7 +5,7 @@
 // max speed the ball can reach is ~6m/s. for an spacing of 5cm between sensors it will take <8.333ms for the ball to reach the next sensor.
 // with 10μs periods, the percent error would be 0.036.
 
-const double r_sensors = 0.1; //distance between sensors (m)
+const double r_sensors = 0.1905; //distance between sensors (m)
 const double mass_ball = 45.93 * (10 ^ -3); // mass of the golf ball (kg)
 
 const int sensor1 = 3; //TX -> sensor 1
@@ -75,6 +75,6 @@ void calculations() {
   mean_velocity /= 3;
 
   Serial.print("Mean speed (m/s): ");
-  Serial.println(mean_velocity, 5);
+  Serial.println(mean_velocity, 4);
   memset(passAllSensors, 0, sizeof(passAllSensors));
 }
