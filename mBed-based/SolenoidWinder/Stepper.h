@@ -13,7 +13,7 @@ class Stepper {
         //Objects of DigitalOut class to control motor motion and direction
         DigitalOut* motor;
         DigitalOut* motor_dir;
-
+        
         // Method returns the period in seconds
         float rpsToPeriod();
         
@@ -23,6 +23,7 @@ class Stepper {
         
         // Constructor for stepper motor
         Stepper(float rps, PinName speedPin, PinName dirPin, int microstepFactor = 1, int motorStepsPerRev = 200, int dir = 0 );
+
 
         // Getter and setter for rps
         void setRPS(float rps) {this-> rps = rps; }
@@ -38,12 +39,12 @@ class Stepper {
         void setDir(int dir) {this-> dir = dir;} 
         int getDir() {return dir;} 
 
-        // Method reverses the direction of the motor after given waitTime in seconds
-        // void reverseMotor(int waitTime);
+        // Method reverses the direction of the motor after given runTime in seconds
+        void reverseMotor(float runTime);
 
         // Method turns motor in a certain direction (default is 0) for a given runTime in seconds
-        void TurnMotor(int runTime); 
-        void TurnMotor(int runTime, Stepper motor1);
+        void turnMotor(float runTime); 
 
 
         } ;
+
